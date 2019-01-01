@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02843C0F-C413-44B7-8130-5E864F8A05A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DBprogram</RootNamespace>
+    <AssemblyName>DBprogram</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=4.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\vs_Tools\vs2017\WHC.Pager.WinControlEx\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=8.2.0.2, Culture=neutral, PublicKeyToken=5fd520d36328f741, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\vs_Tools\vs2017\WHC.Pager.WinControlEx\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WHC.Pager.Entity">
+      <HintPath>..\..\..\vs_Tools\vs2017\WHC.Pager.WinControlEx\WHC.Pager.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="WHC.Pager.WinControlEx">
+      <HintPath>..\..\..\vs_Tools\vs2017\WHC.Pager.WinControlEx\WHC.Pager.WinControlEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBprogramDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBprogramDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DB.cs" />
+    <Compile Include="form\Find.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Find.Designer.cs">
+      <DependentUpon>Find.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Move.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Move.Designer.cs">
+      <DependentUpon>Move.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Panel.Designer.cs">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="form\Regiest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Regiest.Designer.cs">
+      <DependentUpon>Regiest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="form\Find.resx">
+      <DependentUpon>Find.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\move.resx">
+      <DependentUpon>Move.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Panel.resx">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="form\Regiest.resx">
+      <DependentUpon>Regiest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DBprogramDataSet.xsc">
+      <DependentUpon>DBprogramDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBprogramDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBprogramDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBprogramDataSet.xss">
+      <DependentUpon>DBprogramDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
